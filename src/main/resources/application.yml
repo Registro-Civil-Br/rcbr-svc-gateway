@@ -1,10 +1,8 @@
 server:
   port: 7070
 
+# CONFIGURAÇÕES GATEWAY
 spring:
-  application:
-    name: SVC-GATEWAY
-    # CONFIGURAÇÕES GATEWAY
     cloud:
       gateway:
         actuator:
