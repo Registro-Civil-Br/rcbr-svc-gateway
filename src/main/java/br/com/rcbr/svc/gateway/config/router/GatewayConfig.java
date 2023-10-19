@@ -14,6 +14,7 @@ public class GatewayConfig {
     public RouteLocator gatewayRouter(RouteLocatorBuilder builder, GatewayService gatewayService) {
         return builder.routes()
                 .route(gatewayService.constroiRotaPadraoDeComunicacao(MicroServicosEnum.SVC_NASCIMENTO))
+                .route(gatewayService.constroiRotaPadraoDeComunicacao(MicroServicosEnum.SVC_CPF))
                 .build();
     }
 
