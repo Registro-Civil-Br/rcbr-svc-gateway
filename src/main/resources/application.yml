@@ -1,0 +1,40 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: SVC-GATEWAY
+    # CONFIGURAÇÕES GATEWAY
+    cloud:
+      gateway:
+        actuator:
+          verbose:
+            enabled: true
+        metrics:
+          enabled: true
+      discovery:
+        enabled: true
+
+# CONFIGURAÇÕES EUREKA
+eureka:
+  client:
+    fetch-register: true
+    register-with-eureka: true
+    defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  serviceUrl:
+    defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
+
+# CONFIGURAÇÕES ACTUATOR
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+          - 'gateway'
+  endpoint:
+    gateway:
+      enabled:
+        true
