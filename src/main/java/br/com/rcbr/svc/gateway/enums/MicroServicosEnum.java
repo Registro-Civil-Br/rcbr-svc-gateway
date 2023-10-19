@@ -13,6 +13,13 @@ public enum MicroServicosEnum {
             "/nascimento",
             "SVC-NASCIMENTO",
             "/api/v1/certidao-nascimento"
+    ),
+    SVC_CPF(
+            "Serviço de criação de CPF",
+            "https://github.com/Registro-Civil-Br/rcbr-svc-cpf",
+            "/cpf",
+            "SVC-CPF",
+            "/api/v1/cpf"
     );
 
     private final String descricaoMicroServico;
